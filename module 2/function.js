@@ -21,7 +21,12 @@ console.log(ans);
 
 
 
-let a = function(num1,num2){
-    return num1%num2;
-}
-console.log(a(10,20));
+//let a = function(num1,num2){
+  //  return num1%num2;
+//}
+//console.log(a(10,20));
+
+
+(function(num1,num2){
+    console.log(num1/num2) ;  
+})(10,5);
