@@ -16,11 +16,40 @@ let capamrica ={
     friend: ['natsha','bucky','bucky','thor'],
     adress:{
         state:'himachal',
-        city:'kangra',
+        city:'kangra'
     },
+    isavenger:false, 
     sayhi:function(){
         console.log("say hii heloo anshu");
     }
 
 }
+
+//
+///
+//whole object
+console.log(capamrica.adress.city);
+console.log(capamrica.Name);
+console.log(capamrica.Age);
+console.log(capamrica.friend);
+console.log(capamrica.friend[0]);
+//
+//
+//call function
+capamrica.sayhi();
+//
+//
+console.log("before updare",capamrica);
+// add new key 
+capamrica.movie =['endgame','civil war','avaneger'];
+console.log("after updare",capamrica);
+
+//delete key
+delete capamrica.movie;
+capamrica.isavenger = true;
 console.log(capamrica);
+// 
+//
+//second method
+console.log(capamrica.Name);
+console.log(capamrica['Name']);
