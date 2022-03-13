@@ -1,21 +1,40 @@
 let fs = require("fs");
 //console.log(fs);
 let path = require("path");
-let filepath = path.join(__dirname,"file.txt");
+//let filepath = path.join(__dirname,"file.txt");
 //console.log(filepath);
 // c-create
-fs.writeFileSync(filepath,"hello file path");
+//fs.writeFileSync(filepath,"hello file path");
 
 //r- read
-console.log('before update:->');
+//console.log('before update:->');
 
-let content = fs.readFileSync(filepath,'utf-8');
-console.log(content);
+//let content = fs.readFileSync(filepath,'utf-8');
+//console.log(content);
 
 //u-update 
-fs.appendFileSync(filepath,'\nNew added content');
-console.log('after update:->');
-console.log(fs.readFileSync(filepath,'utf-8'));
+//fs.appendFileSync(filepath,'\nNew added content');
+//console.log('after update:->');
+//console.log(fs.readFileSync(filepath,'utf-8'));
 
 //D - delete
  //fs.unlinkSync(filepath);
+ //create directory
+ if(!fs.existsSync("hamrri directory"))
+ fs.mkdirSync("hamrri directory");
+
+ //read directory
+ let folderpath = "C:\\Users\\Dell\\Desktop\\FJP6\\module 1";
+
+ let contentofFolder = fs.readdirSync(folderpath);
+ console.log(contentofFolder);
+
+ //delete a directory
+ fs.rmdirSync("hamrri directory");
+ //
+ // copy  a file
+ let sourcepath = path.join(__dirname,"file.txt");
+ let destination = path.join(__dirname,"module","file.txt");
+ console.log(sourcepath);
+ console.log(destination);
+ fs.copyFileSync(sourcepath,destination);;

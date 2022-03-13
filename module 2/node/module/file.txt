@@ -1,0 +1,2 @@
+hello file path
+New added content
